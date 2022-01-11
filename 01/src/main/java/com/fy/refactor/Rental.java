@@ -1,7 +1,7 @@
 package com.fy.refactor;
 
 public class Rental {
-    private Movie movie;
+    Movie movie;
     private int daysRented;
 
     public Rental(Movie movie, int daysRented) {
@@ -23,5 +23,13 @@ public class Rental {
 
     public void setDaysRented(int daysRented) {
         this.daysRented = daysRented;
+    }
+
+    public double getCharge(){
+        return movie.getCharge(getDaysRented());
+    }
+
+    public int getFrequentPoints(){
+        return movie.getFrequentPoints(getDaysRented());
     }
 }
